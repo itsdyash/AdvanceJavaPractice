@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data</title>
+    <style>
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+        }
+        table, th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="Registration" method="post">
+    <table>
+        <tr><th colspan="2"><h1>Registration Form</h1></th></tr>
+        <tr>
+            <td><label for="Name">Name:</label></td>
+            <td><input type="text" name="Name" id="Name" required></td>
+        </tr>
+        <tr>
+            <td><label for="Number">Number:</label></td>
+            <td><input type="number" name="Number" id="Number" required></td>
+        </tr>
+        <tr>
+            <td><label for="Email">Email:</label></td>
+            <td><input type="email" name="Email" id="Email" required></td>
+        </tr>
+        <tr>
+            <td><label>Gender:</label></td>
+            <td><label for="Male">Male:</label>
+                <input type="radio" name="Gender" id="Male" value="Male" required>
+                <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="Female" value="Female" required></td>
+        </tr>
+        <tr>
+            <td><label for="Course">Course:</label></td>
+            <td><select id="Course" name="Course">
+                <option>JAVA</option>
+                <option>C++</option>
+                <option>Python</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="checkbox" name="checkbox" id="checkbox" value="Registration">
+                <label for="checkbox"> Agree to terms and conditions</label>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" id="submit"></td>
+            <td><input type="reset"></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
