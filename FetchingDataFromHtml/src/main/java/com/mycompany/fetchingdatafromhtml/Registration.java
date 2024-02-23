@@ -1,5 +1,6 @@
 package com.mycompany.fetchingdatafromhtml;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,9 +20,17 @@ public class Registration extends HttpServlet {
         if(check!=null){
         out.print("<h1>Welcome to Registration Page "+ Name +"</h1>");
         out.print("Registration Succesfull!");
+        
             
         }else{
             out.print("Please Agree The terms and Conditions");
+            //To send or include data from another file or to another file have to use Request dispather
+            RequestDispatcher rd = req.getRequestDispatcher("index.html");
+            //there are two major methods of request dispatcher 
+            //1.
+            rd.include(req, resp);
+            //2.
+//            rd.forward(req, resp);
         }
     }
     
